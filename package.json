@@ -1,9 +1,13 @@
 {
   "devDependencies": {
+    "@stencil/core": "^3.0.0",
+    "@types/minimatch": "^6.0.0",
+    "@types/node": "^24.3.0",
     "commitizen": "^4.0.3",
     "conventional-commit-types": "^3.0.0",
     "cz-conventional-changelog": "^3.1.0",
-    "lerna": "^3.20.2"
+    "lerna": "^3.20.2",
+    "typescript": "^5.9.2"
   },
   "scripts": {
     "build": "lerna run build --stream",
@@ -11,7 +15,8 @@
     "clean": "lerna clean",
     "deep-clean": "npm run clean && rm -rf packages/**/package-lock.json && rm -rf packages/**/dist && rm -rf packages/**/loader && rm -rf packages/**/esm && rm -rf packages/**/.stencil",
     "publish": "lerna publish --yes -m 'Publish [ci skip]'",
-    "bootstrap": "lerna bootstrap"
+    "bootstrap": "lerna bootstrap",
+    "start": "lerna run start --stream"
   },
   "config": {
     "commitizen": {
